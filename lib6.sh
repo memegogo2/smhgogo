@@ -11,8 +11,8 @@ echo "deb http://th.archive.ubuntu.com/ubuntu jammy main" | sudo tee -a /etc/apt
 echo "Updating package list..."
 sudo apt-get update
 
-# 安装libc6
+# 安装libc6并自动接受所有配置
 echo "Installing libc6..."
-sudo apt-get install -y libc6
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libc6
 
 echo "Setup completed successfully!"
